@@ -1,0 +1,23 @@
+{
+  "name": "react-redux-kit",
+  "version": "1.0.0",
+  "description": "react-redux-kit",
+  "main": "app/server-bundle",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gukun00/redux-redux-git.git"
+  },
+  "keywords": [
+    "react",
+    "redux"
+  ],
+  "author": "guk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gukun00/redux-redux-git/issues"
+  },
+  "homepage": "https://github.com/gukun00/redux-redux-git#readme"
+}
