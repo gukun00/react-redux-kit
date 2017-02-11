@@ -9,7 +9,7 @@ import NotFoundPage from './components/NotFoundPage/NotFoundPage';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={HomePage}/>
-    <Route path="users" component={ConnectedUsersPage}/>
+    <Route path="sysuser" component={ConnectedUsersPage}/>
     <Route path="*" component={NotFoundPage}/>
   </Route>
 );

@@ -14,5 +14,14 @@ export default {
       page: 1
     },
     data: []
+  },
+  menus:{
+      isFetching:false,
+      meta:{
+       total: 0,
+       perPage: 10,
+       page: 1
+      },
+      data:[]
   }
 };

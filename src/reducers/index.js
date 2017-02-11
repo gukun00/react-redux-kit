@@ -6,16 +6,19 @@ import auth from './auth';
 import reducersGenerate from './reducersGenerate';
 
 import {
-  USER
+  USER,
+  MENU,
 } from './../constants/actionTypes';
 import initialState from './initialState';
 
 const users = reducersGenerate(USER, initialState.users);
+const menus = reducersGenerate(MENU, initialState.menus);
 
 const rootReducer = combineReducers({
   routing: routerReducer,
   auth,
-  users
+  users,
+  menus,
 });
 
 export default rootReducer;
