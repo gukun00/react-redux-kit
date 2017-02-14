@@ -7,9 +7,9 @@ import ConnectedUsersPage from './containers/UsersPage/UsersPage';
 import NotFoundPage from './components/NotFoundPage/NotFoundPage';
 
 export default (
-  <Route path="/" component={App}>
-    <IndexRoute component={HomePage}/>
-    <Route path="sysuser" component={ConnectedUsersPage}/>
-    <Route path="*" component={NotFoundPage}/>
-  </Route>
+      <Route path="/" component={App}>
+        <IndexRoute component={HomePage}/>
+        <Route path="/sysuser" component={ConnectedUsersPage}/>
+        <Route path="*" component={NotFoundPage}/>
+      </Route>
 );

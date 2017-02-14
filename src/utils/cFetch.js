@@ -123,7 +123,7 @@ function cFetch(url, options) {
     ...opts.headers,
     'Authorization': cookie.get('access_token') || ''
   };
-
+  console.log("opts:",opts)
   return fetch(mergeUrl, opts)
     .then(check401)
     .then(check404)

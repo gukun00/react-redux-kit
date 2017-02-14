@@ -5,7 +5,7 @@
  * @description 主入口模块
  */
 
-import React from 'react';
+import React, {PropTypes, Component} from 'react';
 import { connect } from 'react-redux';
 
 // 引入Antd的导航组件
@@ -25,7 +25,6 @@ const { SubMenu } = Menu;
 // Which part of the Redux global state does our component want to receive as props?
 function mapStateToProps(state) {
   const { menus } = state;
-
   return {
     menus
   };
@@ -40,8 +39,16 @@ function mapDispatchToProps(dispatch) {
 }
 
  class SiderDemo extends React.Component {
+
+   static propTypes = {
+    children: PropTypes.element,
+    isAuthenticated: React.PropTypes.bool,
+    routing: PropTypes.object
+  };
+
   constructor(props) {
     super(props);
+      console.log("props12",props)
   }
 
   state = {
@@ -65,10 +72,10 @@ function mapDispatchToProps(dispatch) {
         bodyHeight : bodyHeight
       });
 
-      this.props.fetchMenus().then(
-          value => this.setState({menus:value}),
-          error => this.setState({loading: false, error: error})
-      );
+//      this.props.fetchMenus().then(
+//          value => this.setState({menus:value}),
+//          error => this.setState({loading: false, error: error})
+//      );
 
        //绑定正确的上下文
       this.props.fetchMenus().then((menus,error) =>{
@@ -143,7 +150,7 @@ function mapDispatchToProps(dispatch) {
         background: '#fff',
         minHeight: 360
       }}>
-              content
+             {this.props.children}
             </div>
           </Content>
           <Footer style={{
@@ -157,7 +164,6 @@ function mapDispatchToProps(dispatch) {
       );
   }
 }
-
 
 export default connect(
   mapStateToProps,

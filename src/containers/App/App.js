@@ -14,7 +14,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     //this.renderAuthenticatedPage = this.renderAuthenticatedPage.bind(this);
-
+console.log("props:",props)
     this.state = {
       collapse: false
     };
@@ -28,7 +28,8 @@ class App extends Component {
     console.log("isAuthenticated",isAuthenticated)
     return (
       <div>
-        {isAuthenticated?<AppMain/> : <Login/>}
+        {/*对象解构传递*/}
+        {isAuthenticated?<AppMain {... this.props}/> : <Login/>}
       </div>
     );
   }
