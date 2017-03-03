@@ -121,7 +121,11 @@ function cFetch(url, options) {
 
   opts.headers = {
     ...opts.headers,
-    'Authorization': cookie.get('access_token') || ''
+    'Authorization': cookie.get('access_token') || '',
+    //'Access-Control-Allow-Origin': '*',
+    //'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type',
+    //'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE',
+    //'Access-Control-Max-Age: ' : "360000",
   };
   console.log("opts:",opts)
   return fetch(mergeUrl, opts)

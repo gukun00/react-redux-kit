@@ -14,7 +14,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   // bindActionCreators(ActionCreators, dispatch)
   return {
-    fetchUsers: () => dispatch(fetchUsers());
+    fetchUsers: () => dispatch(fetchUsers()),
     deleteUser: () =>dispatch(deleteUsers())
   };
 }

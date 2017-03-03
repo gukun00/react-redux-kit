@@ -97,8 +97,9 @@ function mapDispatchToProps(dispatch) {
   render() {
       //获取菜单
       function getMenuList(state){
-          if(state && state.menus && state.menus.length > 0){
-              return   state.menus.map(menu =>  <SubMenu key={menu.id} title={<span><Icon type={menu.icon} />{menu.name}</span>}>
+           //console.log("state1234567890:" ,state )
+          if(state && state.menus && state.menus.menus && state.menus.menus.length > 0){
+              return   state.menus.menus.map(menu =>  <SubMenu key={menu.id} title={<span><Icon type={menu.icon} />{menu.name}</span>}>
                     {menu.subMenus.map(sub => <Menu.Item key={sub.id}>   <Link to={sub.url}>
                                        {sub.name}
                 </Link></Menu.Item>)}

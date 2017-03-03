@@ -6,11 +6,13 @@ if(process.env.NODE_ENV == "test"){
   host = location.origin;
 }
 
-const baseUri = host + "/api/v1/";
+host = "http://localhost:8081";
+
+const baseUri = host + "/WebProxy/";
 export const API_CONFIG = {
   host: host,
   baseUri: baseUri,
-  auth: 'auth',
-  users: 'users',
-  menus:'menus'
+  auth: 'TestProxy.ashx',
+  users: 'TestProxy.ashx',
+  menus:'TestProxy.ashx'
 };
